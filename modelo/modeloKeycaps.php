@@ -1,0 +1,138 @@
+<?php
+require("C:\Users\pc\Desktop\\2º DAW\Entorno Servidor\proyecto_servidor_primer_trimestre\modelo\productos.php");
+require("C:\Users\pc\Desktop\\2º DAW\Entorno Servidor\proyecto_servidor_primer_trimestre\modelo\usuarios.php");
+
+session_start();
+
+function selectKeycaps($pdo) {
+    try {
+        $statement = $pdo->prepare("SELECT * FROM tienda_lpcomponents.productos where categoria=3");/*puedes mantar por het el nombre de la categoria*/
+        $statement->execute();
+
+        $results = [];
+
+        foreach ($statement->fetchAll() as $p) {
+            
+            
+            $image = $p["fotos"];
+            $image2 = productImage($image);
+            $productos = new Producto($p["productoID"], $p["nombre"], $p["descripcion"],$p["precio"],$p["categoria"],$image2,0); 
+            array_push($results,$productos);
+        }
+
+        return $results;
+        
+    }catch (PDOException $e) {
+        echo "No se ha podido completar la transaccion";
+    }
+}
+
+
+function productImage($foto){
+    $base64Image = base64_encode($foto);
+    return $base64Image;
+}
+
+
+
+function selectKeycapsNombreASC($pdo) {
+    try {
+        $statement = $pdo->prepare("SELECT * FROM tienda_lpcomponents.productos where categoria=3 order by nombre asc");/*puedes mantar por het el nombre de la categoria*/
+        $statement->execute();
+
+        $results = [];
+
+        foreach ($statement->fetchAll() as $p) {
+            
+            
+            $image = $p["fotos"];
+            $image2 = productImage($image);
+            $productos = new Producto($p["productoID"], $p["nombre"], $p["descripcion"],$p["precio"],$p["categoria"],$image2,0); 
+            array_push($results,$productos);
+        }
+
+        return $results;
+        
+    }catch (PDOException $e) {
+        echo "No se ha podido completar la transaccion";
+    }
+}
+
+
+function selectKeycapsNombreDESC($pdo) {
+    try {
+        $statement = $pdo->prepare("SELECT * FROM tienda_lpcomponents.productos where categoria=3 order by nombre desc");/*puedes mantar por het el nombre de la categoria*/
+        $statement->execute();
+
+        $results = [];
+
+        foreach ($statement->fetchAll() as $p) {
+            
+            
+            $image = $p["fotos"];
+            $image2 = productImage($image);
+            $productos = new Producto($p["productoID"], $p["nombre"], $p["descripcion"],$p["precio"],$p["categoria"],$image2,0); 
+            array_push($results,$productos);
+        }
+
+        return $results;
+        
+    }catch (PDOException $e) {
+        echo "No se ha podido completar la transaccion";
+    }
+}
+
+
+function selectKeycapsPrecioASC($pdo) {
+    try {
+        $statement = $pdo->prepare("SELECT * FROM tienda_lpcomponents.productos where categoria=3 order by precio asc");/*puedes mantar por het el nombre de la categoria*/
+        $statement->execute();
+
+        $results = [];
+
+        foreach ($statement->fetchAll() as $p) {
+            
+            
+            $image = $p["fotos"];
+            $image2 = productImage($image);
+            $productos = new Producto($p["productoID"], $p["nombre"], $p["descripcion"],$p["precio"],$p["categoria"],$image2,0); 
+            array_push($results,$productos);
+        }
+
+        return $results;
+        
+    }catch (PDOException $e) {
+        echo "No se ha podido completar la transaccion";
+    }
+}
+
+
+function selectKeycapsPrecioDESC($pdo) {
+    try {
+        $statement = $pdo->prepare("SELECT * FROM tienda_lpcomponents.productos where categoria=3 order by precio DESC");/*puedes mantar por het el nombre de la categoria*/
+        $statement->execute();
+
+        $results = [];
+
+        foreach ($statement->fetchAll() as $p) {
+            
+            
+            $image = $p["fotos"];
+            $image2 = productImage($image);
+            $productos = new Producto($p["productoID"], $p["nombre"], $p["descripcion"],$p["precio"],$p["categoria"],$image2,0); 
+            array_push($results,$productos);
+        }
+
+        return $results;
+        
+    }catch (PDOException $e) {
+        echo "No se ha podido completar la transaccion";
+    }
+}
+
+
+
+
+
+
+?>

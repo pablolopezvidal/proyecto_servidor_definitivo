@@ -1,0 +1,373 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#cabecera{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#cabecera img{
+width: 20%;
+height: auto;
+}
+#cabecera> *{
+    padding: 20px;
+}
+#cabecera2{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+#usuario{
+    width: 40px;
+    height: 40px;
+    background-color: #42c7f3;
+    border-radius:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a {
+    text-decoration: none; /* Quitar subrayado */
+    color: inherit; /* Utilizar el color por defecto del texto */
+}
+.carousel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    width: 70%;
+    height: 60vh;
+    background-color: gray;
+    position: relative;
+}
+
+
+.slide {
+    scroll-snap-align: start;
+    flex: 0 0 100%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la imagen cubra todo el contenedor sin distorsionarse */
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #ccc;
+}
+
+.progress-bar-inner {
+    height: 100%;
+    width: 100%;
+    background-color: #4caf50;
+    transition: width 1s linear; /* Animación de transición de la barra de progreso */
+}
+
+#componentes{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(58, 12, 163, 1);
+    border-radius: 26px;
+    display: flex;
+    flex-direction: row;
+}
+
+#componentes *{
+    width: 448px;
+    height: 255px;
+    transform: rotate(-45deg);
+}
+#componentes a{
+    position: absolute;
+    top:50%;
+    width: 448px;
+    height: 255px;
+    transform: rotate(-45deg);
+}
+
+#perifericos{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(153, 25, 148, 1);
+    border-radius: 26px;
+    display: flex;
+    flex-direction: row;
+}
+
+#perifericos *{
+    width: 448px;
+    height: 255px;
+    transform: rotate(-45deg);
+}
+#perifericos a{
+    position: absolute;
+    top:50%;
+    width: 448px;
+    height: 255px;
+    transform: rotate(-45deg);
+}
+
+#keycaps{
+    width: 100%;
+    height: 100%;
+    background-color: #4CC9F0;
+    border-radius: 26px;
+    display: flex;
+    flex-direction: row;
+}
+
+#keycaps *{
+    width: 448px;
+    height: 255px;
+    transform: rotate(-45deg);
+}
+#keycaps a{
+    position: absolute;
+    top:50%;
+    width: 448px;
+    height: 255px;
+    transform: rotate(-45deg);
+}
+.pro_cats_1{
+    width: 30%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.caja{
+    background-color: #d9d9d9;
+    width: 45%;
+    height: 400px;
+    padding: 10px;
+}
+.caja img{
+    max-width: 100%;
+    max-height: 50%;
+}
+#servicios_cats{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    flex-wrap: wrap;
+    height: auto;
+    gap: 30px;
+}
+
+#productos_cats{
+    width: 80%;
+    height: 100px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    gap: 30px;
+}
+.producto_categoria_cajon{
+    width: 30%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(66, 4, 153);
+    border-radius: 12px;
+    color: white;
+}
+
+
+
+#productos_cats2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 40vh;
+    gap: 30px;
+    margin-bottom: 150px;
+}
+
+.producto_categoria_cajon2{
+    margin-top: 160px;
+    border-radius: 12px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+#caja2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#servicios_cats3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    flex-wrap: wrap;
+    height: auto;
+    gap: 30px;
+}
+#filtros{
+    width: 20%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+}
+#cajaFiltros{
+    width: 90%;
+    height: auto;
+    border: 2px solid rgb(240, 240, 240);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding-top: 20px;
+}
+
+
+
+.carrito {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carrito h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.carrito p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.carrito ul {
+    list-style: none;
+    padding: 0;
+}
+
+.carrito li {
+    margin-bottom: 5px;
+    color: #444;
+}
+#contenido_carrito{
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #b7b7b7;
+    border-radius: 12px;
+}
+.cajon_productos_carro{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    border-bottom: 1px solid #b7b7b7;
+}
+.cajon_productos_carro img{
+    width: 100px;
+    height: 100px;
+}
+#info_perfil{
+    width: 50%;
+    height: 200px;
+}
+#contenido_carros{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#aboutas{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.caja_trabajador{
+    width: 800px;
+    height: auto;
+    border: 1px solid rgb(176, 176, 176);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
